@@ -1,0 +1,7 @@
+book/
+exercises/
+docs/
+.DS_Store
+.omc/
+demo.txt
+Python Distilled.md
