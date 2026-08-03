@@ -1,0 +1,28 @@
+"""
+Turns the given binary number into a series of actions
+"""
+
+ACTIONS = [
+    "Reverse the order of the operations in the secret handshake",
+    "wink", 
+    "double blink", 
+    "close your eyes", 
+    "jump"
+]
+
+def commands(binary_str):
+    """
+    Turns the given binary number into a series of actions
+    """
+    reverse = 1
+    if binary_str[0] == "1":
+        reverse = -1
+
+    actions = []
+    for idx in range(1, 5):
+        if binary_str[-idx * reverse] == "1":
+            actions.append(ACTIONS[idx * reverse])
+
+    return actions
+            
+    
